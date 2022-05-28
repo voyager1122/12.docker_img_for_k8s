@@ -7,7 +7,7 @@ export RUNNER_TOKEN=$(echo $payload | jq .token --raw-output)
     --name $(hostname) \
     --token ${RUNNER_TOKEN} \
     --url https://github.com/${GITHUB_OWNER}/${GITHUB_REPOSITORY} \
-    --work ${RUNNER_WORKDIR} \
+#    --work ${RUNNER_WORKDIR} \
     --unattended \
     --replace
 remove() {
