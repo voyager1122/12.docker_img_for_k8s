@@ -1,9 +1,12 @@
 FROM debian:jessie
-ARG RUNNER_VERSION="2.278.0"
+ARG RUNNER_VERSION="2.291.1"
 
+ENV RUNNER_NAME "runner"
 ENV GITHUB_PERSONAL_TOKEN ""
 ENV GITHUB_OWNER ""
 ENV GITHUB_REPOSITORY ""
+ENV GITHUB_PAT ""
+ENV RUNNER_WORKDIR "_work"
 
 RUN apt-get update \
     && apt-get install -y \
